@@ -12,5 +12,5 @@ sudo apt install exiftool
 ## Forma de uso
 ```
 ./extrator.sh url extensão
-ex.: ./extrator.sh www.site.com pdf
+ex.: ./extrator.sh site.com pdf
 ```
