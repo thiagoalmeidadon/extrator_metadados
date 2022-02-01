@@ -6,7 +6,9 @@ site=$1
 ext=$2
 
 main(){
-    echo oi
+    echo "Fazendo a busca de $ext para o endereço $site"
+    busca="https://www.google.com/search?q=site:$site+ext:$ext"
+    lynx --dump $busca | grep "$ext" | cut -d "=" -f 2 | egrep -v "site|google" | cut -d "&" -f 1
 }
 
 if [ "$1" == "" ] || [ "$2" == "" ] ; then
